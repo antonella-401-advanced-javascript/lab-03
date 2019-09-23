@@ -34,4 +34,4 @@ Implement the `save` method. Assign the object an id which is also used as the f
 * Lint Tests: `npm run lint`
 
 #### Whiteboard
-![Whiteboard Diagram]()
+![Whiteboard Diagram](whiteboard.png)
