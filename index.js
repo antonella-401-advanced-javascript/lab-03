@@ -1,5 +1,19 @@
 const DocumentCollection = require('./lib/document-collection');
 
-const documents = new DocumentCollection(/* path to use */);
+const documents = new DocumentCollection('./testing');
 
-// write some code to exercise your document collection
+const test = {
+  key: 'test1'
+};
+
+documents.save(test);
+
+documents.get(test.id)
+  .then(res => {
+    console.log(res);
+  });
+
+documents.getAll()
+  .then(res => {
+    console.log(res);
+  });

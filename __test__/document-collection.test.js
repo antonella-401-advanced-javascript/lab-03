@@ -35,7 +35,7 @@ describe('Document Collection', () => {
     return documentCollection.get(id)
       .then(res => {
         expect(readFile.mock.calls.length).toBe(1);
-        expect(readFile.mock.calls[0][0]).toBe('./folder/' + id + '.json');
+        expect(readFile.mock.calls[0][0]).toBe('folder/' + id + '.json');
         expect(res).toEqual(newFolder);
       });
   });
