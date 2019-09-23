@@ -1,6 +1,6 @@
-# lab-03
+# lab-04
 
-## Async
+## Model and Database
 
 ### Author: Antonella Gutierrez
 
@@ -15,8 +15,8 @@
 ### Modules
 ##### Exported Values and Methods
 
-##### Save/Get/Get All Object To File
-Implement the `save` method. Assign the object an id which is also used as the file name (plus `.json`). `save` is an asynchronous method and must return a promise. Handle any expectable errors. Implement the `get` method. See notes in starter code in `DocumentCollection`. Convert the supplied `id` and `this.folder` into correct path. `get` is an asynchronous method and must return a promise. Handle any expectable errors. Implement the `getAll` method. See notes in starter code in `DocumentCollection`. Read the file names from `this.folder`. Manage sequential and parallel workflows correctly. `getAll` is an asynchronous method and must return a promise. Handle any expectable errors.
+##### Model Class and Manual Integration Testing
+Use Model class to create a model, find by the id, and retrieve all models. create a schemaConfig and `Model` instance from that, export the created instance. Require `Database` and connect, import model instance(s), read and write using `create`, `findById`, and `find`.
 
 ### Setup
 #### `.env` requirements
