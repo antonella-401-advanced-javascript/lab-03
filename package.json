@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
