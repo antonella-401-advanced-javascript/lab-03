@@ -1,6 +1,6 @@
 # lab-03
 
-## Asyn
+## Async
 
 ### Author: Antonella Gutierrez
 
