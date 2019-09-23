@@ -1,5 +1,4 @@
 const DocumentCollection = require('../lib/document-collection');
-const path = require('path');
 
 jest.mock('../lib/files.js', () => ({
   readFile: jest.fn(),
