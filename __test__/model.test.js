@@ -85,7 +85,7 @@ describe('Model', () => {
   it('gets all', () => {
     mockCollection.getAll.mockResolvedValue([]);
 
-    return mockCollection.getAll()
+    return Cats.find()
       .then(all => {
         expect(getCollection.mock.calls.length).toBe(1);
         expect(getCollection.mock.calls[0][0]).toEqual('cats');
