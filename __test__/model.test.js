@@ -81,4 +81,15 @@ describe('Model', () => {
         expect(id).toBe(12345);
       });
   });
+
+  it('gets all', () => {
+    mockCollection.getAll.mockResolvedValue([]);
+
+    return mockCollection.getAll()
+      .then(all => {
+        expect(getCollection.mock.calls.length).toBe(1);
+        expect(getCollection.mock.calls[0][0]).toEqual('cats');
+        expect(all).toEqual([]);
+      });
+  });
 });
