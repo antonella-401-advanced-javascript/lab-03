@@ -67,4 +67,18 @@ describe('Model', () => {
   });
 
   // test rest of model methods. 
+
+  it('finds by id', () => {
+    const obj = {
+      name: 'test',
+      id: 12345
+    };
+
+    mockCollection.get.mockResolvedValue(obj.id);
+
+    return Cats.findById(obj.id)
+      .then(id => {
+        expect(id).toBe(12345);
+      });
+  });
 });
