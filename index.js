@@ -1,14 +1,14 @@
 const DocumentCollection = require('./lib/document-collection');
 
-const documents = new DocumentCollection('./testing');
+const documents = new DocumentCollection('./test');
 
 const test = {
-  key: 'test1'
+  key: 'test1',
 };
 
 documents.save(test);
 
-documents.get(test.id)
+documents.get(test._id)
   .then(res => {
     console.log(res);
   });
