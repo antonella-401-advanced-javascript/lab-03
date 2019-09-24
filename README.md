@@ -4,7 +4,7 @@
 
 ### Author: Antonella Gutierrez
 
-### Links and Resources
+### Links and Resources 
 
 * [submission PR](https://github.com/antonella-401-advanced-javascript/lab-03/pull/2)
 * [travis](https://travis-ci.com/antonella-401-advanced-javascript/lab-03)
