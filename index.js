@@ -1,33 +1,32 @@
 const Database = require('./lib/database');
+const { setup, testing, testing2 } = require('./models/instances');
 const Model = require('./lib/model');
-const DocumentCollection = require('./lib/document-collection');
-
-const documents = new DocumentCollection('test/test');
-
-const test = {
-  key: 'potato'
-};
-
-documents.save(test);
 
 Database.connect('./test')
   .then(() => {
-    const model = new Model('test', test);
+    const schemaSetup = new Model('test', setup);
     
-    model.create(test)
+    schemaSetup.create(testing2)
       .then(created => {
-        console.log(created);
+        console.log('potato', created);
+        schemaSetup.findById(created._id)
+          .then(res => {
+            console.log('potato id', res);
+            schemaSetup.create(testing)
+              .then(created => {
+                console.log('potato2', created);
+                schemaSetup.findById(created._id)
+                  .then(res => {
+                    console.log('potato2 id', res);
+                    schemaSetup.find()
+                      .then(res => {
+                        console.log('potato4', res);
+                      });
+                  });
+              });
+          });
+
       });
-    
-    model.findById(test._id)
-      .then(res => {
-        console.log(res);
-      });
-    
-    model.find()
-      .then(res => {
-        console.log(res);
-      });
-  })
-  .finally(() => Database.close());
+  });
+
 
