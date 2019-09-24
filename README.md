@@ -34,4 +34,4 @@ Use Model class to create a model, find by the id, and retrieve all models. crea
 * Lint Tests: `npm run lint`
 
 #### Whiteboard
-![Whiteboard Diagram](lab-04.png)
+![Whiteboard Diagram](lab-04.jpg)
